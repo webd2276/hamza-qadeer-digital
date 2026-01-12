@@ -1,7 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
-import images from "src/assets/images";
+import images from "src/assets";
 const projects = [{
   title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
