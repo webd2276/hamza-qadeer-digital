@@ -5,13 +5,13 @@ const projects = [{
   title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-  image: "/placeholder.svg",
+  image: "src/assets/l.png",
   liveUrl: "https://laforge.com.pk/",
 }, {
   title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-  image: "/placeholder.svg",
+  image: "src/assets/f.png",
   liveUrl: "https://fourteenstartravels.ae/",
 }];
 const ProjectsSection = () => {
