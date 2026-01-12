@@ -1,31 +1,23 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
-
-const projects = [
-  {
-    title: "The Mobile Masters",
-    description:
-      "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
-    technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    image: "/placeholder.svg",
-    liveUrl: "#",
-    sourceUrl: "#",
-  },
-  {
-    title: "Closet.pk",
-    description:
-      "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
-    technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-    image: "/placeholder.svg",
-    liveUrl: "#",
-    sourceUrl: "#",
-  },
-];
-
+const projects = [{
+  title: "The Mobile Masters",
+  description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
+  technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+  image: "/placeholder.svg",
+  liveUrl: "#",
+  sourceUrl: "#"
+}, {
+  title: "Closet.pk",
+  description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
+  technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
+  image: "/placeholder.svg",
+  liveUrl: "#",
+  sourceUrl: "#"
+}];
 const ProjectsSection = () => {
-  return (
-    <section id="projects" className="py-20 lg:py-32 bg-muted/30">
+  return <section id="projects" className="py-20 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-4">
@@ -43,12 +35,7 @@ const ProjectsSection = () => {
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {projects.map((project, index) => (
-            <AnimatedSection
-              key={project.title}
-              animation={index % 2 === 0 ? "fade-right" : "fade-left"}
-              delay={index * 150}
-            >
+          {projects.map((project, index) => <AnimatedSection key={project.title} animation={index % 2 === 0 ? "fade-right" : "fade-left"} delay={index * 150}>
               <div className="group bg-background rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full">
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
@@ -71,47 +58,28 @@ const ProjectsSection = () => {
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
-                      >
+                    {project.technologies.map(tech => <span key={tech} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium">
                         {tech}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
                     <Button size="sm" variant="gradient" asChild>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-1" />
                         View Project
                       </a>
                     </Button>
                     <Button size="sm" variant="outline" asChild>
-                      <a
-                        href={project.sourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="h-4 w-4 mr-1" />
-                        Source Code
-                      </a>
+                      
                     </Button>
                   </div>
                 </div>
               </div>
-            </AnimatedSection>
-          ))}
+            </AnimatedSection>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProjectsSection;
