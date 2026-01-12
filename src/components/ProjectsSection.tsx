@@ -7,14 +7,12 @@ const projects = [{
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   image: "/placeholder.svg",
   liveUrl: "#",
-  sourceUrl: "#"
 }, {
   title: "Closet.pk",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
   image: "/placeholder.svg",
   liveUrl: "#",
-  sourceUrl: "#"
 }];
 const ProjectsSection = () => {
   return <section id="projects" className="py-20 lg:py-32 bg-muted/30">
