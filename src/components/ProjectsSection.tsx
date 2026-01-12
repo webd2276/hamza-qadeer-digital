@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
+import images from "src/assets/images";
 const projects = [{
   title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
@@ -11,7 +12,7 @@ const projects = [{
   title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-  image: "src/assets/f.png",
+  image: " src/assets/f.png",
   liveUrl: "https://fourteenstartravels.ae/",
 }];
 const ProjectsSection = () => {
