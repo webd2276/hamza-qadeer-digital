@@ -1,18 +1,19 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
-import images from "src/assets";
+import lImage from "@/assets/l.png";
+import fImage from "@/assets/f.png";
 const projects = [{
   title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-  image: "src/assets/l.png",
+  image: lImage,
   liveUrl: "https://laforge.com.pk/",
 }, {
   title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-  image: " src/assets/f.png",
+  image: fImage,
   liveUrl: "https://fourteenstartravels.ae/",
 }];
 const ProjectsSection = () => {
@@ -38,8 +39,9 @@ const ProjectsSection = () => {
               <div className="group bg-background rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full">
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {project.title.charAt(0)}
                     </span>
                   </div>
