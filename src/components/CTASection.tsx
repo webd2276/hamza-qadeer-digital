@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimatedSection from "./AnimatedSection";
 
 const CTASection = () => {
   return (
@@ -9,7 +10,7 @@ const CTASection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-3xl mx-auto text-center">
+        <AnimatedSection animation="scale" className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Interested in{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -29,7 +30,7 @@ const CTASection = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

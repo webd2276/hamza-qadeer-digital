@@ -6,6 +6,7 @@ import {
   Lock,
   Server,
 } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const skillCategories = [
   {
@@ -62,7 +63,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-4">
             Skills & Expertise
           </span>
@@ -72,37 +73,40 @@ const SkillsSection = () => {
               Bring to the Table
             </span>
           </h2>
-        </div>
+        </AnimatedSection>
 
         {/* Skill Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {skillCategories.map((category, index) => (
-            <div
+            <AnimatedSection
               key={category.title}
-              className="group p-6 bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300"
+              animation="fade-up"
+              delay={index * 80}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary group-hover:to-accent transition-all duration-300">
-                <category.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className="group p-6 bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary group-hover:to-accent transition-all duration-300">
+                  <category.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-4">
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Technologies Section */}
-        <div className="text-center">
+        <AnimatedSection className="text-center">
           <h3 className="text-2xl font-bold text-foreground mb-8">
             Technologies I Work With
           </h3>
@@ -116,7 +120,7 @@ const SkillsSection = () => {
               </span>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const contactMethods = [
   {
@@ -25,7 +26,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-4">
             Get In Touch
           </span>
@@ -39,27 +40,32 @@ const ContactSection = () => {
             Ready to start your next project? Reach out through any of these
             channels.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {contactMethods.map((method) => (
-            <a
+          {contactMethods.map((method, index) => (
+            <AnimatedSection
               key={method.title}
-              href={method.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-8 bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 text-center hover:-translate-y-1"
+              animation="fade-up"
+              delay={index * 100}
             >
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary group-hover:to-accent transition-all duration-300">
-                <method.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {method.title}
-              </h3>
-              <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
-                {method.value}
-              </p>
-            </a>
+              <a
+                href={method.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-8 bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 text-center hover:-translate-y-1"
+              >
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary group-hover:to-accent transition-all duration-300">
+                  <method.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {method.title}
+                </h3>
+                <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                  {method.value}
+                </p>
+              </a>
+            </AnimatedSection>
           ))}
         </div>
       </div>
