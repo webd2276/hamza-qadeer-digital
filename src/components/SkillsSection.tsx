@@ -57,6 +57,7 @@ const technologies = [
   "WooCommerce",
   "Git",
   "REST API",
+  "Docker",
 ];
 
 const SkillsSection = () => {
