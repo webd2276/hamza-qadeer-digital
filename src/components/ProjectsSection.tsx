@@ -2,17 +2,17 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
 const projects = [{
-  title: "The Mobile Masters",
+  title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   image: "/placeholder.svg",
-  liveUrl: "#",
+  liveUrl: "https://laforge.com.pk/",
 }, {
-  title: "Closet.pk",
+  title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
   image: "/placeholder.svg",
-  liveUrl: "#",
+  liveUrl: "https://fourteenstartravels.ae/",
 }];
 const ProjectsSection = () => {
   return <section id="projects" className="py-20 lg:py-32 bg-muted/30">
