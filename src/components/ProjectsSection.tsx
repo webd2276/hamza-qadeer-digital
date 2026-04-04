@@ -1,34 +1,22 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
+import lImage from "@/assets/l.png";
+import fImage from "@/assets/f.png";
 const projects = [{
-  title: "Antique Cafe",
-  description: "A stylish cafe website with modern UI, menu showcase, and responsive design built with CSS.",
-  technologies: ["HTML", "CSS", "JavaScript"],
-  image: null,
-  liveUrl: "https://github.com/webd2276/anitique-cafe",
-  githubUrl: "https://github.com/webd2276/anitique-cafe",
+  title: "LA Forge",
+  description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
+  technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+  image: lImage,
+  liveUrl: "https://laforge.com.pk/",
+  githubUrl: "https://github.com/webd2276/LA-Forge",
 }, {
-  title: "Travel Smart",
-  description: "A travel agency website with destination listings, booking info, and clean responsive layout.",
-  technologies: ["HTML", "CSS", "JavaScript"],
-  image: null,
-  liveUrl: "https://github.com/webd2276/Travel-Smart",
-  githubUrl: "https://github.com/webd2276/Travel-Smart",
-}, {
-  title: "Digital Waves",
-  description: "A web services business website showcasing digital solutions and service offerings.",
-  technologies: ["HTML", "CSS", "JavaScript"],
-  image: null,
-  liveUrl: "https://github.com/webd2276/Digital-Waves",
-  githubUrl: "https://github.com/webd2276/Digital-Waves",
-}, {
-  title: "LMS Platform",
-  description: "A Learning Management System with course management and user dashboard functionality.",
-  technologies: ["PHP", "MySQL", "JavaScript"],
-  image: null,
-  liveUrl: "https://github.com/webd2276/LMS",
-  githubUrl: "https://github.com/webd2276/LMS",
+  title: "Fourteenstartravels",
+  description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
+  technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
+  image: fImage,
+  liveUrl: "https://fourteenstartravels.ae/",
+  githubUrl: "https://github.com/webd2276/Fourteenstartravels",
 }];
 const ProjectsSection = () => {
   return <section id="projects" className="py-20 lg:py-32 bg-muted/30">
