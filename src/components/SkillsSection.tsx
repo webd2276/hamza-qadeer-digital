@@ -5,6 +5,7 @@ import {
   Layout,
   Lock,
   Server,
+  Workflow,
 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
@@ -45,6 +46,11 @@ const skillCategories = [
     title: "System Basics",
     skills: ["Hosting Setup", "Database Management", "Website Optimization"],
   },
+  {
+    icon: Workflow,
+    title: "Automation & N8n",
+    skills: ["N8n Workflows", "Webhook Triggers", "API Automation", "WhatsApp Bot", "Google Sheets", "Zapier Alternative"],
+  },
 ];
 
 const technologies = [
@@ -58,6 +64,8 @@ const technologies = [
   "Git",
   "REST API",
   "Docker",
+  "N8n",
+  "Automation",
 ];
 
 const SkillsSection = () => {

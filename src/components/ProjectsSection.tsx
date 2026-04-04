@@ -1,20 +1,50 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
-import lImage from "@/src/assets/l.png";
-import fImage from "@/src/assets/f.png";
+import lImage from "@/assets/l.png";
+import fImage from "@/assets/f.png";
 const projects = [{
   title: "LA Forge",
   description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   image: lImage,
   liveUrl: "https://laforge.com.pk/",
+  githubUrl: "https://github.com/webd2276/LA-Forge",
 }, {
   title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
   image: fImage,
   liveUrl: "https://fourteenstartravels.ae/",
+  githubUrl: "https://github.com/webd2276/Fourteenstartravels",
+}, {
+  title: "Antique Cafe",
+  description: "A stylish cafe website with modern UI, menu showcase, and responsive design built with CSS.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  image: null,
+  liveUrl: "https://github.com/webd2276/anitique-cafe",
+  githubUrl: "https://github.com/webd2276/anitique-cafe",
+}, {
+  title: "Travel Smart",
+  description: "A travel agency website with destination listings, booking info, and clean responsive layout.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  image: null,
+  liveUrl: "https://github.com/webd2276/Travel-Smart",
+  githubUrl: "https://github.com/webd2276/Travel-Smart",
+}, {
+  title: "Digital Waves",
+  description: "A web services business website showcasing digital solutions and service offerings.",
+  technologies: ["HTML", "CSS", "JavaScript"],
+  image: null,
+  liveUrl: "https://github.com/webd2276/Digital-Waves",
+  githubUrl: "https://github.com/webd2276/Digital-Waves",
+}, {
+  title: "LMS Platform",
+  description: "A Learning Management System with course management and user dashboard functionality.",
+  technologies: ["PHP", "MySQL", "JavaScript"],
+  image: null,
+  liveUrl: "https://github.com/webd2276/LMS",
+  githubUrl: "https://github.com/webd2276/LMS",
 }];
 const ProjectsSection = () => {
   return <section id="projects" className="py-20 lg:py-32 bg-muted/30">
@@ -39,13 +69,23 @@ const ProjectsSection = () => {
               <div className="group bg-background rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full">
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {project.image ? (
+                    <>
+                      <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.title.charAt(0)}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/10 flex items-center justify-center">
+                      <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent opacity-70">
+                        {project.title.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Info */}
@@ -73,7 +113,10 @@ const ProjectsSection = () => {
                       </a>
                     </Button>
                     <Button size="sm" variant="outline" asChild>
-                      
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-1" />
+                        GitHub
+                      </a>
                     </Button>
                   </div>
                 </div>
