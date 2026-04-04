@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/hamza-profile.png";
 
@@ -59,12 +59,12 @@ const HeroSection = () => {
               </Button>
               <Button variant="hero" size="lg" asChild>
                 <a
-                  href="https://wa.me/923023487168"
+                  href="https://drive.usercontent.google.com/download?id=1g2buwGe1j_aUun1_XYVk3p7Ubx-viJmy&export=download&authuser=0&confirm=t&uuid=5808ed21-dada-4f42-bd6c-96ae15dc6a8e&at=AGN2oQ18GDrp3LiqM-uB5EUpMrBo:1775306083541"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Let's Talk
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
                 </a>
               </Button>
             </div>
