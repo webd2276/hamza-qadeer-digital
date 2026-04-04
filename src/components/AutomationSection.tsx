@@ -265,12 +265,12 @@ const AutomationSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="gradient" asChild>
               <a href="https://wa.me/923023487168" target="_blank" rel="noopener noreferrer">
-                💬 WhatsApp Pe Baat Karein
+                💬 Contact on WhatsApp 
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="mailto:webd2276@gmail.com">
-                📧 Email Karein
+                📧 Email Us
               </a>
             </Button>
           </div>
