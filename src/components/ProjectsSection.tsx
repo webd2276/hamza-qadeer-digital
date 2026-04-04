@@ -1,21 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
-import lImage from "@/assets/l.png";
-import fImage from "@/assets/f.png";
 const projects = [{
-  title: "LA Forge",
-  description: "A professional WordPress-based business website with custom UI, optimized performance, and responsive design.",
-  technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-  image: lImage,
-  liveUrl: "https://laforge.com.pk/",
-}, {
-  title: "Fourteenstartravels",
-  description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
-  technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
-  image: fImage,
-  liveUrl: "https://fourteenstartravels.ae/",
-}, {
   title: "Antique Cafe",
   description: "A stylish cafe website with modern UI, menu showcase, and responsive design built with CSS.",
   technologies: ["HTML", "CSS", "JavaScript"],
