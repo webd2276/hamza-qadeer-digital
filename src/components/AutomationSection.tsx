@@ -76,18 +76,22 @@ const stats = [
 
 const n8nProjects = [
   {
-    title: "WooCommerce Order Automation",
+    title: "AI-Powered LinkedIn Post Automation",
     description:
-      "N8n workflow that triggers on WooCommerce order, updates Google Sheet, sends WhatsApp notification, and generates invoice automatically.",
-    tags: ["N8n", "WooCommerce", "Google Sheets", "WhatsApp"],
-    github: "https://github.com/webd2276",
+      "N8n workflow that automates LinkedIn post creation and scheduling using AI-generated content and GitHub-hosted workflow assets.",
+    tags: ["N8n", "LinkedIn", "AI", "Automation"],
+    github: "https://github.com/webd2276/AI-Powered-LinkedIn-Post-Automation",
+    image:
+      "https://raw.githubusercontent.com/webd2276/AI-Powered-LinkedIn-Post-Automation/main/Screenshot%20from%202026-02-06%2021-34-26.png",
   },
   {
-    title: "WordPress Lead Capture Bot",
+    title: "Ai-Agent",
     description:
-      "Automated lead capture system - Contact form data flows into CRM, triggers email sequence, and posts to Slack channel via N8n.",
-    tags: ["N8n", "WordPress", "Email", "CRM"],
-    github: "https://github.com/webd2276",
+      "AI-driven workflow agent built with N8n to automate communication, data processing, and task orchestration across services.",
+    tags: ["N8n", "AI", "Agent", "Automation"],
+    github: "https://github.com/webd2276/Ai-Agent",
+    image:
+      "https://raw.githubusercontent.com/webd2276/Ai-Agent/main/Screenshot%20from%202026-02-06%2020-48-52.png",
   },
 ];
 
@@ -213,28 +217,40 @@ const AutomationSection = () => {
                 animation="fade-up"
                 delay={index * 100}
               >
-                <div className="group p-6 bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 h-full hover:-translate-y-2">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                <div className="group overflow-hidden bg-background rounded-2xl border border-border hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 h-full hover:-translate-y-2">
+                  {project.image ? (
+                    <div className="relative h-48 bg-muted/10">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    </div>
+                  ) : null}
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <Button size="sm" variant="outline" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                      </a>
+                    </Button>
                   </div>
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      View on GitHub
-                    </a>
-                  </Button>
                 </div>
               </AnimatedSection>
             ))}
