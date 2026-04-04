@@ -9,14 +9,12 @@ const projects = [{
   technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   image: lImage,
   liveUrl: "https://laforge.com.pk/",
-  githubUrl: "https://github.com/webd2276/LA-Forge",
 }, {
   title: "Fourteenstartravels",
   description: "A feature-rich e-commerce platform with product management, secure checkout, and optimized user experience.",
   technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
   image: fImage,
   liveUrl: "https://fourteenstartravels.ae/",
-  githubUrl: "https://github.com/webd2276/Fourteenstartravels",
 }, {
   title: "Antique Cafe",
   description: "A stylish cafe website with modern UI, menu showcase, and responsive design built with CSS.",
